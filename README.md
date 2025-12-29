@@ -156,7 +156,7 @@ Indikator ini dirancang khusus untuk trader yang mengandalkan konsep Supply/Dema
 
 Dirancang khusus untuk trader **Smart Money Concept (SMC)** / **ICT** yang fokus pada XAUUSD (Gold) dan GBPJPY, tapi bisa digunakan di pair lain.
 
-## Visual Overview (Contoh Tampilan Serupa)<grok:render card_id="aa0e2f,c2c887,642908,bdd2c9,d33387,1eb79b" card_type="image_card_group" type="render_card"></grok:render>
+## Visual Overview (Contoh Tampilan Serupa)
 
 ## Fitur Utama
 
