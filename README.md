@@ -145,18 +145,72 @@ Indikator ini dirancang khusus untuk trader yang mengandalkan konsep Supply/Dema
 
 *(Coming soon – akan ditambahkan gambar chart dengan zona Supply/Demand yang terdeteksi)*
 
+# OrderFlow Matrix Pro – Advanced Market Structure & Order Flow Indicator
+
+![MT5 Indicator](https://img.shields.io/badge/Platform-MetaTrader%205-blue)  
+![Version](https://img.shields.io/badge/Version-1.01-brightgreen)  
+![Optimized For](https://img.shields.io/badge/Optimized%20For-XAUUSD%20%7C%20GBPJPY-gold)  
+![License](https://img.shields.io/badge/License-Free%20for%20Personal%20Use-orange)
+
+**OrderFlow Matrix Pro** adalah indikator MetaTrader 5 canggih yang menggabungkan analisis **Market Structure**, **Breakout Detection**, **Order Flow (Volume Delta)**, **Liquidity Zones**, dan **Risk Management** otomatis dalam satu dashboard yang powerful.
+
+Dirancang khusus untuk trader **Smart Money Concept (SMC)** / **ICT** yang fokus pada XAUUSD (Gold) dan GBPJPY, tapi bisa digunakan di pair lain.
+
+## Visual Overview (Contoh Tampilan Serupa)<grok:render card_id="aa0e2f,c2c887,642908,bdd2c9,d33387,1eb79b" card_type="image_card_group" type="render_card"></grok:render>
+
+## Fitur Utama
+
+- **Market Structure Detection**: Swing High/Low otomatis + Higher Highs/Lower Lows → Bullish/Bearish/Ranging + Phase (Markup, Decline, Accumulation, Distribution)
+- **Breakout Signals**: Panah hijau (Bullish) / merah (Bearish) dengan filter volume spike, delta confirmation, spread, dan session
+- **Order Flow Analysis**:
+  - Volume Delta Histogram (real-time buy/sell pressure)
+  - Cumulative Delta
+  - Imbalance detection
+  - Point of Control (POC) simplified
+- **Liquidity Zones**: Deteksi pool liquidity + stop hunt probability
+- **Dashboard Komprehensif**: Real-time info trend, breakout strength, delta, POC, liquidity, SL/TP, position size, session
+- **Risk Management Otomatis**: Hitung SL berdasarkan ATR, TP 1:2 & 1:3, position sizing berdasarkan risk %
+- **Alert System**: Terminal alert, push notification, email pada breakout, structure change, liquidity hunt
+- **Multi-Timeframe Confirmation** & Session Filter (London/NY/Overlap)
+- **Keyboard Shortcut**: Tekan **D** untuk toggle dashboard, **R** untuk reset analisis
+
+## Cara Install
+
+1. Download file `OrderFlowMatrixPro.ex5` dari repository ini (folder Release atau root).
+2. Buka MT5 → File → Open Data Folder → MQL5 → Indicators
+3. Paste file `.ex5` ke folder Indicators
+4. Restart MT5 atau refresh Navigator
+5. Drag indikator **OrderFlow Matrix Pro** ke chart (rekomendasi: XAUUSD atau GBPJPY, timeframe M15-H1)
+
+## Pengaturan Input Utama
+
+| Group                  | Parameter                     | Default | Keterangan |
+|------------------------|-------------------------------|---------|------------|
+| Market Structure      | InpSwingLookback              | 50      | Lookback deteksi swing |
+|                        | InpUseMultiTF                 | true    | Konfirmasi higher timeframe |
+| Breakout Detection    | InpVolumeSpikeMultiplier      | 2.0     | Minimal berapa kali volume spike |
+|                        | InpFilterBySession            | true    | Hanya signal di session aktif |
+| Order Flow            | InpDeltaPeriod                | 20      | Periode kalkulasi delta |
+|                        | InpShowCumulativeDelta        | true    | Tampilkan cumulative delta |
+| Liquidity Zones       | InpShowLiquidityZones         | true    | Tampilkan zona liquidity |
+| Risk Management       | InpDefaultRiskPercent         | 1.0     | Risk per trade (%) |
+|                        | InpAutoPositionSizing         | true    | Hitung lot otomatis |
+| Visual                | InpShowDashboard              | true    | Tampilkan dashboard besar |
+| Alert                 | InpAlertBreakout              | true    | Alert saat breakout confirmed |
+
 ## Catatan Penting
 
 - Indikator ini **gratis untuk penggunaan pribadi**.
-- Tidak diperbolehkan untuk dijual ulang atau didistribusikan sebagai produk komersial tanpa izin.
-- Gunakan dengan bijak – indikator ini adalah alat bantu, bukan holy grail.
+- Tidak boleh dijual ulang atau didistribusikan sebagai produk komersial tanpa izin.
+- Optimalkan untuk **XAUUSD** dan **GBPJPY** – performa terbaik di pair volatil.
+- Gunakan sebagai **confluence tool**, bukan sinyal tunggal.
 
 ## Credit & Support
 
 Dibuat oleh **M4DI~UciH4**  
 GitHub: https://github.com/RizkyEvory  
 
-Jika kamu suka dengan indikator ini, beri ⭐ di repository ini!  
-Feedback, saran, atau laporan bug sangat dihargai.
+Jika kamu suka dengan indikator ini, beri ⭐ di repository!  
+Feedback, saran, atau bug report sangat dihargai.
 
-Happy trading & semoga profit konsisten! 🥇
+Happy trading & semoga cuan konsisten! 🚀💰
