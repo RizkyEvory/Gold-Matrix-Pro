@@ -92,75 +92,71 @@ Indikator ini berfungsi sebagai **decision-support system**, bukan sekadar pembe
 
 ---
 
-## ⚙️ Parameters (Excerpt)
+# SND Hunter Pro – Smart Supply & Demand Zone Indicator
 
-```cpp
-// Core
-InpJMAPeriod        = 14;
-InpRSIPeriod        = 14;
+![MT5 Indicator](https://img.shields.io/badge/Platform-MetaTrader%205-blue)  
+![Version](https://img.shields.io/badge/Version-3.0-brightgreen)  
+![License](https://img.shields.io/badge/License-Free%20for%20Personal%20Use-orange)
 
-// Signal Threshold
-InpStrongBuyLevel  = 75;
-InpStrongSellLevel = -75;
+**SND Hunter Pro** adalah indikator MetaTrader 5 yang secara otomatis mendeteksi dan menampilkan zona Supply & Demand berkualitas tinggi berdasarkan price action, volume, dan kekuatan rejection.
 
-// Dashboard
-InpShowDashboard   = true;
-InpDashboardX      = 20;
-InpDashboardY      = 30;
-Presets
-Style
-Lookback
-Buffer
-Scalping
-50
-2
-Day Trade
-100
-3
-Swing
-200
-4
-📈 Performance Notes
-Metric
-Typical Range
-Win Rate
-~60–65%
-Profit Factor
-≥1.8
-Max Drawdown
-<15%
-Results depend on market conditions and risk management.
-🎮 Usage
-Signal Interpretation
-Score
-Signal
-≥75
-Strong Buy
-50–75
-Weak Buy
--50 to 50
-Neutral
--75 to -50
-Weak Sell
-≤-75
-Strong Sell
-Hotkeys
-F5 → Refresh dashboard
-F6 → Screenshot
-F7 → Toggle dashboard
-📜 License
-Personal License
-Free for personal use
-Attribution required
-30-day trial
-Commercial License
-Required for resale
-Source access
-Priority support
-Custom branding
-📧 Contact: rizkyevory@github.com
-⚠️ Disclaimer
-Trading involves risk.
-Past performance does not guarantee future results.
-Use at your own discretion.
-© 2024 Rizky Evory — All Rights Reserved.
+Indikator ini dirancang khusus untuk trader yang mengandalkan konsep Supply/Demand (SND) atau Smart Money Concept (SMC), terutama pada pair XAUUSD (Gold) dan pair mayor lainnya.
+
+## Fitur Utama
+
+- Deteksi otomatis zona **Supply** (merah) dan **Demand** (hijau) yang fresh & kuat
+- Sistem scoring kekuatan zona (0–100%) berdasarkan:
+  - Freshness (umur zona)
+  - Volume spike
+  - Rejection candle (pin bar, engulfing)
+- Dashboard informatif real-time:
+  - Jumlah zona aktif
+  - Zona terkuat
+  - Zona terdekat (dengan jarak dalam pips + arah ▲▼)
+  - Market bias (Bullish/Bearish/Neutral)
+- Alert saat harga mendekati zona penting (bisa diatur jaraknya)
+- Zona otomatis expire setelah waktu tertentu atau setelah 3x touch
+- Maksimal 8 zona per tipe (Supply/Demand) untuk menjaga chart tetap bersih
+- Visual rectangle + label strength yang mudah dibaca
+
+## Cara Install
+
+1. Download file `SND_Hunter.ex5` dari folder **Release** atau langsung dari repository ini.
+2. Buka MetaTrader 5 → File → Open Data Folder → MQL5 → Indicators
+3. Paste file `SND_Hunter.ex5` ke folder Indicators
+4. Restart MT5 atau refresh Navigator (klik kanan → Refresh)
+5. Drag & drop indikator **SND Hunter Pro** ke chart yang diinginkan
+
+## Pengaturan Input (Inputs)
+
+| Parameter              | Default | Keterangan |
+|-----------------------|---------|------------|
+| LookbackBars          | 100     | Jumlah bar yang dianalisa untuk deteksi zona |
+| MinZoneStrength       | 70.0    | Minimum strength (%) agar zona ditampilkan |
+| ShowAlerts            | true    | Aktifkan alert saat harga mendekati zona |
+| AlertPips             | 25      | Jarak maksimal (dalam pips) untuk trigger alert |
+| ShowDashboard         | true    | Tampilkan panel informasi di pojok kiri atas |
+| SupplyZoneColor       | Crimson | Warna zona Supply |
+| DemandZoneColor       | ForestGreen | Warna zona Demand |
+| MaxZonesPerType       | 8       | Maksimal zona Supply & Demand yang ditampilkan |
+| ZoneExpireHours       | 24      | Zona otomatis hilang setelah berapa jam |
+
+## Screenshot
+
+*(Coming soon – akan ditambahkan gambar chart dengan zona Supply/Demand yang terdeteksi)*
+
+## Catatan Penting
+
+- Indikator ini **gratis untuk penggunaan pribadi**.
+- Tidak diperbolehkan untuk dijual ulang atau didistribusikan sebagai produk komersial tanpa izin.
+- Gunakan dengan bijak – indikator ini adalah alat bantu, bukan holy grail.
+
+## Credit & Support
+
+Dibuat oleh **M4DI~UciH4**  
+GitHub: https://github.com/RizkyEvory  
+
+Jika kamu suka dengan indikator ini, beri ⭐ di repository ini!  
+Feedback, saran, atau laporan bug sangat dihargai.
+
+Happy trading & semoga profit konsisten! 🥇
